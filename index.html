@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="sr">
 <head>
-   <meta charset="UTF-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio - Dusan</title>
+  <title>Portfolio – ddjordjevicc</title>
   <style>
     * {
       box-sizing: border-box;
@@ -20,8 +20,57 @@
     header {
       background-color: #007acc;
       color: white;
-      padding: 2rem 1rem;
-      text-align: center;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        margin-top: 1rem;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
     }
 
     .container {
@@ -30,13 +79,9 @@
       padding: 2rem 1rem;
     }
 
-    .intro {
-      margin-bottom: 2rem;
-    }
-
     h1 {
       font-size: 2.5rem;
-      margin: 0;
+      margin: 1rem 0;
     }
 
     h2 {
@@ -81,29 +126,60 @@
   </style>
 </head>
 <body>
-  <h1>Zdravo, ja sam Dusan</h1>
-  <p>Softverski inzenjer zainteresovan za development i softversko inzenjerstvo. Ovde je izbor mojih radova:</p>
 
-  <h2>Moji projekti</h2>
+  <header>
+    <div class="logo">ddjordjevicc</div>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <nav id="nav">
+      <a href="#projekti">Projekti</a>
+      <a href="https://github.com/ddjordjevicc" target="_blank">GitHub</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
 
-  <div class="projekat">
-    <h3>📱 Kalkulator u JavaScriptu</h3>
-    <p>Jednostavan kalkulator sa osnovnim operacijama i lepim interfejsom.</p>
-    <a href="https://github.com/ddjordjevicc/kalkulator-js" target="_blank">Pogledaj kod</a>
+  <div class="container">
+    <h1>Zdravo, ja sam D(djordjevicc)</h1>
+    <p>Student/programer zainteresovan za frontend i softverski razvoj.</p>
+
+    <h2 id="projekti">Moji Projekti</h2>
+    <div class="projects">
+
+      <div class="project">
+        <h3>📱 Kalkulator u JavaScriptu</h3>
+        <p>Jednostavan web kalkulator sa osnovnim funkcijama.</p>
+        <a href="https://github.com/ddjordjevicc/kalkulator-js" target="_blank">→ Pogledaj kod</a>
+      </div>
+
+      <div class="project">
+        <h3>🌐 Mini portfolio sajt</h3>
+        <p>HTML + CSS sajt postavljen na GitHub Pages.</p>
+        <a href="https://github.com/ddjordjevicc/portfolio-projekat" target="_blank">→ Pogledaj kod</a>
+      </div>
+
+      <div class="project">
+        <h3>🎮 Snake igra (Python)</h3>
+        <p>Igrica rađena u Pygame-u, inspirisana retro stilom.</p>
+        <a href="https://github.com/ddjordjevicc/snake-igrica" target="_blank">→ Pogledaj kod</a>
+      </div>
+
+    </div>
   </div>
 
-  <div class="projekat">
-    <h3>🌐 Mini portfolio sajt</h3>
-    <p>HTML + CSS stranica koju sam napravio pomoću GitHub Pages.</p>
-    <a href="https://github.com/ddjordjevicc/portfolio-projekat" target="_blank">Pogledaj kod</a>
-  </div>
+  <footer id="kontakt">
+    Kontakt: <strong>tvoj@email.com</strong><br>
+    GitHub: <a href="https://github.com/ddjordjevicc" target="_blank">ddjordjevicc</a>
+  </footer>
 
-  <div class="projekat">
-    <h3>🎮 Snake igra (Python)</h3>
-    <p>Retro Snake igra korišćenjem Pygame biblioteke.</p>
-    <a href="https://github.com/ddjordjevicc/snake-igrica" target="_blank">Pogledaj kod</a>
-  </div>
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('nav');
+      nav.classList.toggle('active');
+    }
+  </script>
 
-  <p>📧 Možeš me kontaktirati putem emaila: <strong>dusan.djordjevic1412@gmail.com</strong></p>
 </body>
 </html>
