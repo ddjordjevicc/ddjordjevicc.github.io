@@ -87,3 +87,4 @@ Dnevna aktivnost: Mon Jun 30 05:50:03 CEST 2025
 Dnevna aktivnost: Mon Jun 30 05:50:05 CEST 2025
 Dnevna aktivnost: Mon Jun 30 05:50:08 CEST 2025
 Dnevna aktivnost: Mon Jun 30 05:50:09 CEST 2025
+Dnevna aktivnost: Tue Jul  1 03:17:58 CEST 2025
