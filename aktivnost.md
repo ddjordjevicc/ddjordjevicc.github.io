@@ -115,3 +115,4 @@ Dnevna aktivnost: Sat Jul  5 21:43:01 CEST 2025
 Dnevna aktivnost: Sat Jul  5 21:43:03 CEST 2025
 Dnevna aktivnost: Sat Jul  5 21:43:05 CEST 2025
 Dnevna aktivnost: Sun Jul  6 22:59:47 CEST 2025
+Dnevna aktivnost: Sun Jul  6 22:59:49 CEST 2025
