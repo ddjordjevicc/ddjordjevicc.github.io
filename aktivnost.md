@@ -171,3 +171,4 @@ Dnevna aktivnost: Thu Jul 24 15:36:10 EDT 2025
 Dnevna aktivnost: Thu Jul 24 15:36:13 EDT 2025
 Dnevna aktivnost: Thu Jul 24 15:36:15 EDT 2025
 Dnevna aktivnost: Thu Jul 24 15:36:17 EDT 2025
+Dnevna aktivnost: Sat Jul 26 21:01:46 EDT 2025
