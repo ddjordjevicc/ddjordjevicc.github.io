@@ -212,3 +212,4 @@ Dnevna aktivnost: Fri Aug  1 23:00:55 EDT 2025
 Dnevna aktivnost: Fri Aug  8 21:27:13 EDT 2025
 Dnevna aktivnost: Fri Aug  8 21:27:14 EDT 2025
 Dnevna aktivnost: Fri Aug  8 21:27:15 EDT 2025
+Dnevna aktivnost: Fri Aug  8 21:27:15 EDT 2025
