@@ -3,89 +3,112 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dusan Djordjevic — ML & Software Engineer</title>
+<title>Dusan Djordjevic — ML Engineer</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #0b0f19;
-  color: #e5e7eb;
+body{
+  margin:0;
+  font-family:system-ui;
+  background:#020617;
+  color:#e2e8f0;
 }
 
-header {
-  text-align: center;
-  padding: 100px 20px;
-  background: linear-gradient(180deg,#020617,#0b0f19);
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 40px;
+  background:#020617;
+  position:sticky;
+  top:0;
 }
 
-h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
+nav a{
+  color:#38bdf8;
+  text-decoration:none;
+  margin-left:20px;
 }
 
-.subtitle {
-  font-size: 20px;
-  color: #38bdf8;
+.hero{
+  text-align:center;
+  padding:120px 20px;
 }
 
-section {
-  max-width: 1000px;
-  margin: auto;
-  padding: 60px 20px;
+.hero h1{
+  font-size:56px;
+  margin-bottom:10px;
 }
 
-h2 {
-  color: #38bdf8;
-  margin-bottom: 20px;
+.hero p{
+  font-size:22px;
+  color:#38bdf8;
 }
 
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-  gap: 20px;
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:70px 20px;
 }
 
-.card {
-  background: #111827;
-  padding: 25px;
-  border-radius: 14px;
-  transition: 0.2s;
+h2{
+  color:#38bdf8;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-  background: #1f2937;
+.skills span{
+  background:#0f172a;
+  padding:10px 16px;
+  border-radius:20px;
+  margin:6px;
+  display:inline-block;
 }
 
-.skills span {
-  background: #1f2937;
-  padding: 8px 14px;
-  margin: 5px;
-  display: inline-block;
-  border-radius: 20px;
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:25px;
 }
 
-footer {
-  text-align: center;
-  padding: 40px;
-  color: #9ca3af;
+.card{
+  background:#0f172a;
+  padding:25px;
+  border-radius:16px;
+  transition:0.2s;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  background:#1e293b;
+}
+
+footer{
+  text-align:center;
+  padding:40px;
+  color:#64748b;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Dusan Djordjevic</h1>
-  <div class="subtitle">Software & Machine Learning Engineer</div>
-</header>
+<nav>
+  <div><b>Dusan Djordjevic</b></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
-<section>
+<div class="hero">
+  <h1>Machine Learning Engineer</h1>
+  <p>Building intelligent systems & scalable software</p>
+</div>
+
+<section id="about">
   <h2>About Me</h2>
   <p>
-    Master's student in Software Engineering focused on Machine Learning, 
-    intelligent systems, and building scalable applications that solve real-world problems.
+    Master's student in Software Engineering focused on Machine Learning,
+    AI systems, and modern software development.
+    Passionate about solving real-world problems using data-driven approaches.
   </p>
 </section>
 
@@ -96,38 +119,38 @@ footer {
     <span>Machine Learning</span>
     <span>TensorFlow</span>
     <span>SQL</span>
-    <span>JavaScript</span>
     <span>React</span>
     <span>Node.js</span>
+    <span>Data Analysis</span>
   </div>
 </section>
 
-<section>
+<section id="projects">
   <h2>Projects</h2>
 
   <div class="projects">
 
     <div class="card">
-      <h3>ML Prediction App</h3>
-      <p>Machine learning model deployed as a web application.</p>
+      <h3>ML Prediction System</h3>
+      <p>End-to-end machine learning pipeline with web interface.</p>
     </div>
 
     <div class="card">
-      <h3>Full-Stack Web App</h3>
-      <p>Modern web application using React and Node.js.</p>
+      <h3>Full-Stack Application</h3>
+      <p>Modern web app using React and Node.js.</p>
     </div>
 
     <div class="card">
-      <h3>Data Analysis Project</h3>
-      <p>Data processing and visualization with Python.</p>
+      <h3>Data Visualization Tool</h3>
+      <p>Python-based analytics and visualization system.</p>
     </div>
 
   </div>
 </section>
 
-<section>
+<section id="contact">
   <h2>Contact</h2>
-  <p>Email: dusan.djordjevic1412@example.com</p>
+  <p>Email: yourmail@example.com</p>
   <p>GitHub: github.com/ddjordjevicc</p>
 </section>
 
