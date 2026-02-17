@@ -16,10 +16,7 @@ body{
 nav{
   display:flex;
   justify-content:space-between;
-  padding:18px 40px;
-  background:#020617;
-  position:sticky;
-  top:0;
+  padding:20px 40px;
   border-bottom:1px solid #0f172a;
 }
 
@@ -35,23 +32,32 @@ nav a{
 }
 
 .hero h1{
-  font-size:60px;
+  font-size:64px;
+  margin-bottom:10px;
 }
 
 .hero p{
-  color:#38bdf8;
   font-size:24px;
+  color:#38bdf8;
+  margin-bottom:30px;
 }
 
+/* 🔥 MODERNA DUGMAD */
 .btn{
   display:inline-block;
-  margin-top:25px;
-  padding:12px 22px;
+  margin:10px;
+  padding:14px 26px;
   background:#38bdf8;
   color:#020617;
-  border-radius:10px;
+  border-radius:12px;
   text-decoration:none;
   font-weight:600;
+  transition:0.25s;
+}
+
+.btn:hover{
+  background:#0ea5e9;
+  transform:translateY(-3px);
 }
 
 section{
@@ -64,15 +70,6 @@ h2{
   color:#38bdf8;
 }
 
-.timeline{
-  border-left:2px solid #38bdf8;
-  padding-left:20px;
-}
-
-.timeline div{
-  margin-bottom:25px;
-}
-
 .projects{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -81,8 +78,8 @@ h2{
 
 .card{
   background:#0f172a;
-  padding:25px;
-  border-radius:16px;
+  padding:28px;
+  border-radius:18px;
   transition:0.25s;
 }
 
@@ -104,46 +101,30 @@ footer{
 <nav>
   <div><b>Dusan Djordjevic</b></div>
   <div>
-    <a href="#education">Education</a>
     <a href="#projects">Projects</a>
-    <a href="#linkedin">LinkedIn</a>
+    <a href="#contact">Contact</a>
   </div>
 </nav>
 
 <div class="hero">
   <h1>Machine Learning Engineer</h1>
-  <p>Building AI-powered systems & scalable software</p>
+  <p>AI • Software • Data</p>
 
+  <!-- 🔥 DUGMAD -->
   <a href="cv.pdf" class="btn" download>Download CV</a>
+  <a href="https://www.linkedin.com/in/ddjordjevic/" target="_blank" class="btn">LinkedIn</a>
+  <a href="https://github.com/ddjordjevicc" target="_blank" class="btn">GitHub</a>
 </div>
 
-<section id="education">
-  <h2>Education</h2>
-  <div class="timeline">
-    <div>
-      <b>Master's in Software Engineering</b><br>
-      Focus: Machine Learning & AI
-    </div>
-    <div>
-      <b>Bachelor's Degree</b><br>
-      Software Engineering
-    </div>
-  </div>
-</section>
-
 <section id="projects">
-  <h2>GitHub Projects</h2>
+  <h2>Projects</h2>
   <div id="repos" class="projects"></div>
 </section>
 
-<section id="linkedin">
-  <h2>LinkedIn</h2>
-  <p>
-    Connect with me on LinkedIn:<br>
-    <a href="https://www.linkedin.com/in/ddjordjevic/" target="_blank" style="color:#38bdf8;">
-      linkedin.com/in/ddjordjevic
-    </a>
-  </p>
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: dusan.djordjevic1412@gmail.com</p>
+  <p>Phone: +381614454001</p>
 </section>
 
 <footer>
@@ -161,7 +142,7 @@ fetch("https://api.github.com/users/ddjordjevicc/repos")
     div.innerHTML = `
       <h3>${repo.name}</h3>
       <p>${repo.description || "No description"}</p>
-      <a href="${repo.html_url}" target="_blank" style="color:#38bdf8;">View on GitHub</a>
+      <a href="${repo.html_url}" target="_blank" class="btn">Open Project</a>
     `;
     repos.appendChild(div);
   });
