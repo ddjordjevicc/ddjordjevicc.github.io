@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dusan Djordjevic — Machine Learning Engineer</title>
+<title>Dusan Djordjevic — ML Engineer</title>
 
 <style>
 body{
@@ -11,13 +11,12 @@ body{
   font-family:system-ui;
   background:#020617;
   color:#e2e8f0;
-  scroll-behavior:smooth;
 }
 
 nav{
   display:flex;
   justify-content:space-between;
-  padding:20px 40px;
+  padding:18px 40px;
   background:#020617;
   position:sticky;
   top:0;
@@ -28,23 +27,31 @@ nav a{
   color:#38bdf8;
   text-decoration:none;
   margin-left:25px;
-  font-weight:500;
 }
 
 .hero{
   text-align:center;
   padding:140px 20px;
-  background:linear-gradient(#020617,#020617,#020617,#0b1222);
 }
 
 .hero h1{
   font-size:60px;
-  margin-bottom:15px;
 }
 
 .hero p{
-  font-size:24px;
   color:#38bdf8;
+  font-size:24px;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:12px 22px;
+  background:#38bdf8;
+  color:#020617;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
 }
 
 section{
@@ -55,30 +62,28 @@ section{
 
 h2{
   color:#38bdf8;
-  margin-bottom:25px;
 }
 
-.skills span{
-  background:#0f172a;
-  padding:12px 18px;
-  border-radius:25px;
-  margin:7px;
-  display:inline-block;
-  font-size:15px;
+.timeline{
+  border-left:2px solid #38bdf8;
+  padding-left:20px;
+}
+
+.timeline div{
+  margin-bottom:25px;
 }
 
 .projects{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:30px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
 }
 
 .card{
   background:#0f172a;
-  padding:28px;
-  border-radius:18px;
+  padding:25px;
+  border-radius:16px;
   transition:0.25s;
-  border:1px solid #1e293b;
 }
 
 .card:hover{
@@ -86,15 +91,10 @@ h2{
   background:#1e293b;
 }
 
-.contact p{
-  font-size:18px;
-}
-
 footer{
   text-align:center;
-  padding:50px;
+  padding:40px;
   color:#64748b;
-  border-top:1px solid #0f172a;
 }
 </style>
 </head>
@@ -104,74 +104,69 @@ footer{
 <nav>
   <div><b>Dusan Djordjevic</b></div>
   <div>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
     <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <a href="#linkedin">LinkedIn</a>
   </div>
 </nav>
 
 <div class="hero">
   <h1>Machine Learning Engineer</h1>
-  <p>Building intelligent systems & scalable software</p>
+  <p>Building AI-powered systems & scalable software</p>
+
+  <a href="cv.pdf" class="btn" download>Download CV</a>
 </div>
 
-<section id="about">
-  <h2>About Me</h2>
-  <p>
-    Software Engineer and Master's student specializing in Machine Learning,
-    intelligent systems, and scalable application development.
-    Passionate about building real-world AI solutions and modern software products.
-  </p>
-</section>
-
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="skills">
-    <span>Python</span>
-    <span>Machine Learning</span>
-    <span>TensorFlow</span>
-    <span>SQL</span>
-    <span>JavaScript</span>
-    <span>React</span>
-    <span>Node.js</span>
-    <span>Data Analysis</span>
+<section id="education">
+  <h2>Education</h2>
+  <div class="timeline">
+    <div>
+      <b>Master's in Software Engineering</b><br>
+      Focus: Machine Learning & AI
+    </div>
+    <div>
+      <b>Bachelor's Degree</b><br>
+      Software Engineering
+    </div>
   </div>
 </section>
 
 <section id="projects">
-  <h2>Projects</h2>
-
-  <div class="projects">
-
-    <div class="card">
-      <h3>Machine Learning Prediction System</h3>
-      <p>End-to-end ML pipeline with model deployment.</p>
-    </div>
-
-    <div class="card">
-      <h3>Full-Stack Web Application</h3>
-      <p>Modern application using React and Node.js.</p>
-    </div>
-
-    <div class="card">
-      <h3>Data Analytics Platform</h3>
-      <p>Python-based data processing and visualization.</p>
-    </div>
-
-  </div>
+  <h2>GitHub Projects</h2>
+  <div id="repos" class="projects"></div>
 </section>
 
-<section id="contact" class="contact">
-  <h2>Contact</h2>
-  <p>Email: dusan.djordjevic1412@gmail.com</p>
-  <p>Phone: +381614454001</p>
-  <p>GitHub: github.com/ddjordjevicc</p>
+<section id="linkedin">
+  <h2>LinkedIn</h2>
+  <p>
+    Connect with me on LinkedIn:<br>
+    <a href="https://www.linkedin.com/in/ddjordjevic/" target="_blank" style="color:#38bdf8;">
+      linkedin.com/in/ddjordjevic
+    </a>
+  </p>
 </section>
 
 <footer>
-  © 2026 Dusan Djordjevic — Machine Learning Engineer
+  © 2026 Dusan Djordjevic
 </footer>
+
+<script>
+fetch("https://api.github.com/users/ddjordjevicc/repos")
+.then(res => res.json())
+.then(data => {
+  const repos = document.getElementById("repos");
+  data.slice(0,6).forEach(repo => {
+    const div = document.createElement("div");
+    div.className = "card";
+    div.innerHTML = `
+      <h3>${repo.name}</h3>
+      <p>${repo.description || "No description"}</p>
+      <a href="${repo.html_url}" target="_blank" style="color:#38bdf8;">View on GitHub</a>
+    `;
+    repos.appendChild(div);
+  });
+});
+</script>
 
 </body>
 </html>
