@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dusan Djordjevic — ML Engineer</title>
+<title>Dusan Djordjevic — Machine Learning Engineer</title>
 
 <style>
 body{
@@ -13,6 +13,7 @@ body{
   color:#e2e8f0;
 }
 
+/* NAVBAR */
 nav{
   display:flex;
   justify-content:space-between;
@@ -26,6 +27,7 @@ nav a{
   margin-left:25px;
 }
 
+/* HERO */
 .hero{
   text-align:center;
   padding:140px 20px;
@@ -42,7 +44,7 @@ nav a{
   margin-bottom:30px;
 }
 
-/* 🔥 MODERNA DUGMAD  */
+/* BUTTONS */
 .btn{
   display:inline-block;
   margin:10px;
@@ -60,6 +62,7 @@ nav a{
   transform:translateY(-3px);
 }
 
+/* SECTIONS */
 section{
   max-width:1100px;
   margin:auto;
@@ -70,6 +73,7 @@ h2{
   color:#38bdf8;
 }
 
+/* PROJECTS */
 .projects{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
@@ -88,6 +92,43 @@ h2{
   background:#1e293b;
 }
 
+/* TIMELINE */
+.timeline{
+  position:relative;
+  margin-top:40px;
+}
+
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:20px;
+  top:0;
+  bottom:0;
+  width:2px;
+  background:#38bdf8;
+}
+
+.timeline-item{
+  position:relative;
+  margin-bottom:40px;
+  padding-left:60px;
+}
+
+.timeline-dot{
+  position:absolute;
+  left:11px;
+  width:18px;
+  height:18px;
+  background:#38bdf8;
+  border-radius:50%;
+}
+
+.timeline-content span{
+  color:#64748b;
+  font-size:14px;
+}
+
+/* FOOTER */
 footer{
   text-align:center;
   padding:40px;
@@ -102,6 +143,8 @@ footer{
   <div><b>Dusan Djordjevic</b></div>
   <div>
     <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#timeline">Education</a>
     <a href="#contact">Contact</a>
   </div>
 </nav>
@@ -110,8 +153,7 @@ footer{
   <h1>Machine Learning Engineer</h1>
   <p>AI • Software • Data</p>
 
-  <!-- 🔥 DUGMAD -->
-  <a href="Dusan Djordjevic.pdf" class="btn" download>Download CV</a>
+  <a href="cv.pdf" class="btn" download>Download CV</a>
   <a href="https://www.linkedin.com/in/ddjordjevic/" target="_blank" class="btn">LinkedIn</a>
   <a href="https://github.com/ddjordjevicc" target="_blank" class="btn">GitHub</a>
 </div>
@@ -127,26 +169,46 @@ footer{
   <div class="projects">
 
     <div class="card">
-      <h3>Microsoft Excel Certificate</h3>
-      <p>Advanced Excel skills and data analysis.</p>
-      <a href="excel-certificate.pdf" class="btn" download>Download Certificate</a>
-    </div>
-
-    <div class="card">
       <h3>Machine Learning Certificate</h3>
-      <p>Machine Learning fundamentals and practical applications.</p>
+      <p>Supervised & Unsupervised Learning</p>
       <a href="ml-certificate.pdf" class="btn" download>Download Certificate</a>
     </div>
 
     <div class="card">
-      <h3>Online ML Course</h3>
-      <p>Certification from online learning platform.</p>
-      <a href="#" class="btn" target="_blank">View Certificate</a>
+      <h3>Advanced Excel Certificate</h3>
+      <p>Data Analysis & Automation</p>
+      <a href="excel-certificate.pdf" class="btn" download>Download Certificate</a>
     </div>
 
   </div>
 </section>
-  
+
+<section id="timeline">
+  <h2>Education & Certifications</h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Master's in Software Engineering</h3>
+        <p>Machine Learning & AI</p>
+        <span>2024 — Present</span>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>Bachelor's Degree</h3>
+        <p>Software Engineering</p>
+        <span>Completed</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <section id="contact">
   <h2>Contact</h2>
   <p>Email: dusan.djordjevic1412@gmail.com</p>
@@ -177,3 +239,4 @@ fetch("https://api.github.com/users/ddjordjevicc/repos")
 
 </body>
 </html>
+
